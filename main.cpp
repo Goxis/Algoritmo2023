@@ -5,6 +5,30 @@
 #include "Calculadora.h"
 #include "FormulasComplejas.h"
 #include "Fechas.h"
+#include "MateProf.h"
+
+int validarDato(const char* fm, void* var)
+{
+    int ch;
+    /* Sí scanf devuelve 0, es porque no se cumplió con el formato especificado. */
+    if(!scanf(fm, var))
+    {
+        /* Limpiamos el búfer del teclado, así logramos que la próxima llamada de scanf pause el programa. */
+        while((ch = getchar()) != '\n' && ch != EOF);
+        printf("\n\n\n\n\nFavor de colocar correctamente los datos");
+        return 1;
+    }
+
+    /* Verifica sí el búfer quedó sucio. */
+    if(getchar() != '\n')
+    {
+        /* Limpiamos el búfer del teclado. */
+        while((ch = getchar()) != '\n' && ch != EOF);
+        printf("\n\n\n\n\nFavor de colocar correctamente los datos");
+        return 1;
+    }
+    return 0;
+}
 
 int main(int argc, char** argv) {
     
@@ -14,7 +38,7 @@ int main(int argc, char** argv) {
         int InicioOp = 0;
         Inicio c;
         InicioOp = c.Iniciop();
-        if (InicioOp != 1 && InicioOp != -1 && InicioOp != 2 && InicioOp != 3 && InicioOp != 4)
+        if (InicioOp != 1 && InicioOp != -1 && InicioOp != 2 && InicioOp != 3 && InicioOp != 4 && InicioOp != 5)
         {
             printf("\nFavor de colocar una opcion valida\n----------------\n");
             fflush(stdout);
@@ -37,24 +61,57 @@ int main(int argc, char** argv) {
         else if (InicioOp == 4)
         {
             int fecha, anio, mes, dia;
-            printf("Dame una fecha (AAAAMMDD): ");
-            fflush(stdout);
-            scanf("%d",&fecha);
+            printf("\n\n\n\n\n\n\n\n");
+            while (true)
+            {
+                do
+                {
+                    printf("\n\nDame una fecha (AAAAMMDD): ");
+                    fflush(stdout);
+                    //scanf("%d",&fecha);
+                }while(validarDato("%d", &fecha));
+                if (fecha < 0)
+                {
+                    printf("\n\n\n\n\nFavor de no colocar signos");
+                }
+                else
+                {
+                    int Mun;
+                    Mun = fecha;
+                    int MunCifras = 1;
+                    while (Mun >= 10)
+                    {
+                        Mun = Mun / 10;
+                        MunCifras ++;
+                    }
+                    if (MunCifras == 8)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        printf("\n\n\n\n\nFavor de colocar bien la fecha");
+                    }
+                }
+            }
             Fechas f;
             anio = f.Anio(fecha);
             dia = f.Dia(fecha);
-            printf("La fecha %d tiene ano %d, dia %d, mes %d", fecha, anio, dia, mes);
-            //Fechas c;
+            printf("\n\n\n\n\nLa fecha %d tiene ano %d, dia %d, mes %d\n\n", fecha, anio, dia, mes);
         }
         else if (InicioOp == 5)
         {
             double AreaLadoIcosaedro, AreaIcosaedro;
-            printf("Dame el area de un lado de un icosaedro: ");
-            fflush(stdout);
-            scanf("%lf",&AreaLadoIcosaedro);
-            //MateProf mate;
-            //AreaIcosaedro = mate.AreaIcosaedro(AreaLadoIcosaedro);
-            printf("El area del icosaedro es %lf",AreaIcosaedro);
+            printf("\n\n\n\n\n\n\n\n");
+            do
+            {
+                printf("\nDame el area de un lado de un icosaedro: ");
+                fflush(stdout);
+            }while(validarDato("%lf", &AreaLadoIcosaedro));
+                MateProf mate;
+                AreaIcosaedro = mate.AreaIcosaedro(AreaLadoIcosaedro);
+                printf("\n\n\n\nEl area del icosaedro es %lf\n\n",AreaIcosaedro);
+                
         }
         else if (InicioOp == -1)
         {

@@ -10,6 +10,7 @@ int Inicio::Iniciop()
     printf("2 - Calculadora\n");
     printf("3 - Formulas Complejas\n");
     printf("4 - Fechas\n");
+    printf("5 - Area del icosaedro\n");
     printf("0 - Salir\n");
     printf("Opcion: ");
     fflush(stdout);
@@ -32,6 +33,10 @@ int Inicio::Iniciop()
     else if (EleccionInicio == 4)
     {
         InicioOp = 4;
+    }
+    else if (EleccionInicio == 5)
+    {
+        InicioOp = 5;
     }
     else if (EleccionInicio == 0)
     {
