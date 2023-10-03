@@ -52,8 +52,8 @@ int main(int argc, char** argv) {
             printf("Dame el area de un lado de un icosaedro: ");
             fflush(stdout);
             scanf("%lf",&AreaLadoIcosaedro);
-            MateProf mate;
-            AreaIcosaedro = mate.AreaIcosaedro(AreaLadoIcosaedro);
+            //MateProf mate;
+            //AreaIcosaedro = mate.AreaIcosaedro(AreaLadoIcosaedro);
             printf("El area del icosaedro es %lf",AreaIcosaedro);
         }
         else if (InicioOp == -1)
