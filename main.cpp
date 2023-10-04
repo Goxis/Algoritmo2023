@@ -97,6 +97,7 @@ int main(int argc, char** argv) {
             Fechas f;
             anio = f.Anio(fecha);
             dia = f.Dia(fecha);
+            mes = f.Mes(fecha);
             printf("\n\n\n\n\nLa fecha %d tiene ano %d, dia %d, mes %d\n\n", fecha, anio, dia, mes);
         }
         else if (InicioOp == 5)
@@ -107,11 +108,34 @@ int main(int argc, char** argv) {
             {
                 printf("\nDame el area de un lado de un icosaedro: ");
                 fflush(stdout);
-            }while(validarDato("%lf", &AreaLadoIcosaedro));
+            }
+            while(validarDato("%lf", &AreaLadoIcosaedro));
+            {
                 MateProf mate;
                 AreaIcosaedro = mate.AreaIcosaedro(AreaLadoIcosaedro);
                 printf("\n\n\n\nEl area del icosaedro es %lf\n\n",AreaIcosaedro);
-                
+            }
+            double AreaLadoOctaedro,AreaOctaedro;
+            printf("\nDame el area de un lado de un Octaedro: ");
+            fflush(stdout);
+            scanf("%lf", &AreaLadoOctaedro);
+            MateProf mate;
+            AreaOctaedro = mate.AreaOctaedro(AreaLadoOctaedro);
+            printf("El area del octaedro es %lf\n",AreaOctaedro);
+            
+            double a,b,c;
+            printf("\nDame la longitud del cateto A: ");
+            fflush(stdout);
+            scanf("%lf", &a);
+            printf("\nDame la longitud del cateto B: ");
+            fflush(stdout);
+            scanf("%lf", &b);
+            //MateProf matematiUwU;
+            //c = matematiUwU.TeoremaPitagoras(a,b);
+            //MateProf mate;
+            c = mate.TeoremaPitagoras(a,b);
+            printf("La hipotenusa dio %lf",c);
+            
         }
         else if (InicioOp == -1)
         {

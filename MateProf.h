@@ -5,6 +5,8 @@
 class MateProf {
 public:
     double AreaIcosaedro(double AreaLado);
+    double AreaOctaedro(double AreaLado);
+    double TeoremaPitagoras(double CatetoA, double CatetoB);
 private:
 
 };
