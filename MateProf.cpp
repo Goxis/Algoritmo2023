@@ -15,3 +15,13 @@ double MateProf::TeoremaPitagoras(double CatetoA,double CatetoB)
 {
     return sqrt(pow(CatetoA,2) + pow(CatetoB,2));
 }
+
+double MateProf::TeoremaPoliedros(int Aristas, int Vertices)
+{
+    return (Aristas - Vertices) + 2;
+}
+
+double MateProf::SumaAngulosPoligono(int lados)
+{
+    return (lados - 2)* 180;
+}

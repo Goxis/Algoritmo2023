@@ -136,6 +136,16 @@ int main(int argc, char** argv) {
             c = mate.TeoremaPitagoras(a,b);
             printf("La hipotenusa dio %lf",c);
             
+            int rp,rp2,rpF;
+            printf("\nDame el numero de aristas: ");
+            fflush(stdout);
+            scanf("%d", &rp);
+            printf("\nDame el numero de vortices: ");
+            fflush(stdout);
+            scanf("%d", &rp2);
+            rpF = mate.TeoremaPoliedros(rp,rp2);
+            printf("Las caras del poliedro son %d", rpF);
+            
         }
         else if (InicioOp == -1)
         {
