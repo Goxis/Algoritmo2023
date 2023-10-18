@@ -146,6 +146,13 @@ int main(int argc, char** argv) {
             rpF = mate.TeoremaPoliedros(rp,rp2);
             printf("Las caras del poliedro son %d", rpF);
             
+            double rpp,rpp2;
+            printf("\nDame un angulo: ");
+            fflush(stdout);
+            scanf("%lf", &rpp);
+            rpp2 = 3.1416 / 180;
+            rpp2 = rpp * rpp2;
+            printf("El angulo en radiales es %lf \n\n",rpp2);
         }
         else if (InicioOp == -1)
         {
