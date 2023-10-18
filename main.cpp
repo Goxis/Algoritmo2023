@@ -153,6 +153,17 @@ int main(int argc, char** argv) {
             rpp2 = 3.1416 / 180;
             rpp2 = rpp * rpp2;
             printf("El angulo en radiales es %lf \n\n",rpp2);
+            
+            double rppp,rppp2;
+            printf("\nDame la area de base: ");
+            fflush(stdout);
+            scanf("%lf", &rppp);
+            printf("\nDame la altura: ");
+            fflush(stdout);
+            scanf("%lf", &rppp2);
+            rppp2 = rppp * rppp2;
+            rppp2 = rppp2 / 3;
+            printf("El prisma recto es %lf \n\n",rppp2);
         }
         else if (InicioOp == -1)
         {
