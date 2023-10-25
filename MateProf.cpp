@@ -25,3 +25,12 @@ double MateProf::SumaAngulosPoligono(int lados)
 {
     return (lados - 2)* 180;
 }
+
+int MateProf::Mayor3(int Num1, int Num2, int Num3)
+{
+    int Mayor;
+    if (Num1 > Num2)
+        Mayor = Num1;
+    else
+        Mayor = Num2;
+}
