@@ -57,3 +57,19 @@ int MateProf::Mayor2(int Num1, int Num2)
     }
     return Mayor;
 }
+
+int MateProf::NumIgual(int Num1, int Num2, int Num3)
+{
+    int Val;
+    
+    if ((Num1 + Num2) == Num3)
+        printf("El primer y segundo sumados dan el tercero: %d\n", Num3);
+    else 
+        if ((Num2 + Num3) == Num1)
+            printf("El segundo y tercero sumados dan el primero: %d\n", Num1);
+        else 
+            if ((Num1 + Num3) == Num2)
+                printf("El primero y tercero sumados dan el segundo: %d\n", Num2);
+            else
+                printf("Ningun numero son iguales sumados >:c\n");
+}

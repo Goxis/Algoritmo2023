@@ -178,7 +178,7 @@ int main(int argc, char** argv) {
             MateProf ma;
             int May = ma.Mayor3(n1,n2,n3);
             printf("\nPrimer numero:%d Segundo numero:%d Tercer Numero:%d",n1,n2,n3);
-            printf("\n%d es mayor\n\n",May);*/
+            printf("\n%d es mayor\n\n",May);
             
             int n1,n2;
             printf("Dame el primer numero: ");
@@ -197,7 +197,20 @@ int main(int argc, char** argv) {
             else
             {
                 printf("EL mayor es:%d\n",May);
-            }
+            }*/
+            
+            int n1,n2,n3;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&n1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&n2);
+            printf("Dame el tercero numero: ");
+            fflush(stdout);
+            scanf("%d",&n3);
+            MateProf ma;
+            int May = ma.NumIgual(n1,n2,n3);
         }
         else if (InicioOp == -1)
         {
