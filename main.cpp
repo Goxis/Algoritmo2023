@@ -163,7 +163,7 @@ int main(int argc, char** argv) {
             scanf("%lf", &rppp2);
             rppp2 = rppp * rppp2;
             rppp2 = rppp2 / 3;
-            printf("El prisma recto es %lf \n\n",rppp2);*/
+            printf("El prisma recto es %lf \n\n",rppp2);
         
             int n1,n2,n3;
             printf("Dame el primer numero: ");
@@ -178,8 +178,26 @@ int main(int argc, char** argv) {
             MateProf ma;
             int May = ma.Mayor3(n1,n2,n3);
             printf("\nPrimer numero:%d Segundo numero:%d Tercer Numero:%d",n1,n2,n3);
-            printf("\n%d es mayor\n",May);
+            printf("\n%d es mayor\n\n",May);*/
             
+            int n1,n2;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&n1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&n2);
+            MateProf ma;
+            int May = ma.Mayor2(n1,n2);
+            printf("\nPrimer num:%d Segundo num:%d\n",n1,n2);
+            if (n1 == n2)
+            {
+                printf ("Los numeros son iguales\n");
+            }
+            else
+            {
+                printf("EL mayor es:%d\n",May);
+            }
         }
         else if (InicioOp == -1)
         {

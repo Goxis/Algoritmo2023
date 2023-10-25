@@ -10,6 +10,7 @@ public:
     double TeoremaPoliedros(int Aristas, int Vertices);
     double SumaAngulosPoligono(int Lados);
     int Mayor3(int Num1, int Num2, int Num3);
+    int Mayor2(int Num1, int Num2);
 private:
 
 };

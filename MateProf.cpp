@@ -1,4 +1,5 @@
 #include "MateProf.h"
+#include <stdio.h>
 #include <math.h>
 
 double MateProf::AreaIcosaedro(double AreaLado)
@@ -35,5 +36,24 @@ int MateProf::Mayor3(int Num1, int Num2, int Num3)
         Mayor = Num2;
     if (Mayor < Num3)
         Mayor = Num3;
+    return Mayor;
+}
+
+int MateProf::Mayor2(int Num1, int Num2)
+{
+    int Mayor,Vl;
+    if (Num1 == Num2)
+    {
+        //printf("Los numeros son iguales: %d",Num1);
+        Mayor = Num1;
+    }
+    else if (Num1 > Num2)
+    {
+        Mayor = Num1;
+    }
+    else
+    {
+        Mayor = Num2;
+    }
     return Mayor;
 }
