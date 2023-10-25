@@ -102,7 +102,7 @@ int main(int argc, char** argv) {
         }
         else if (InicioOp == 5)
         {
-            double AreaLadoIcosaedro, AreaIcosaedro;
+            /*double AreaLadoIcosaedro, AreaIcosaedro;
             printf("\n\n\n\n\n\n\n\n");
             do
             {
@@ -163,7 +163,23 @@ int main(int argc, char** argv) {
             scanf("%lf", &rppp2);
             rppp2 = rppp * rppp2;
             rppp2 = rppp2 / 3;
-            printf("El prisma recto es %lf \n\n",rppp2);
+            printf("El prisma recto es %lf \n\n",rppp2);*/
+        
+            int n1,n2,n3;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&n1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&n2);
+            printf("Dame el tercero numero: ");
+            fflush(stdout);
+            scanf("%d",&n3);
+            MateProf ma;
+            int May = ma.Mayor3(n1,n2,n3);
+            printf("\nPrimer numero:%d Segundo numero:%d Tercer Numero:%d",n1,n2,n3);
+            printf("\n%d es mayor\n",May);
+            
         }
         else if (InicioOp == -1)
         {

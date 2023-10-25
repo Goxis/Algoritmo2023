@@ -33,4 +33,7 @@ int MateProf::Mayor3(int Num1, int Num2, int Num3)
         Mayor = Num1;
     else
         Mayor = Num2;
+    if (Mayor < Num3)
+        Mayor = Num3;
+    return Mayor;
 }
