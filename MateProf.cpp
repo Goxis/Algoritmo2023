@@ -60,8 +60,6 @@ int MateProf::Mayor2(int Num1, int Num2)
 
 int MateProf::NumIgual(int Num1, int Num2, int Num3)
 {
-    int Val;
-    
     if ((Num1 + Num2) == Num3)
         printf("El primer y segundo sumados dan el tercero: %d\n", Num3);
     else 
@@ -72,4 +70,9 @@ int MateProf::NumIgual(int Num1, int Num2, int Num3)
                 printf("El primero y tercero sumados dan el segundo: %d\n", Num2);
             else
                 printf("Ningun numero son iguales sumados >:c\n");
+}
+
+int MateProf::CincoNumeros(int Num1, int Num2, int Num3, int Num4, int Num5)
+{
+    
 }
