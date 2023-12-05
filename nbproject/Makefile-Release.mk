@@ -41,6 +41,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/FormulasComplejas.o \
 	${OBJECTDIR}/Inicio.o \
 	${OBJECTDIR}/MateProf.o \
+	${OBJECTDIR}/Negocios.o \
 	${OBJECTDIR}/Probando.o \
 	${OBJECTDIR}/main.o
 
@@ -98,6 +99,11 @@ ${OBJECTDIR}/MateProf.o: MateProf.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MateProf.o MateProf.cpp
+
+${OBJECTDIR}/Negocios.o: Negocios.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Negocios.o Negocios.cpp
 
 ${OBJECTDIR}/Probando.o: Probando.cpp
 	${MKDIR} -p ${OBJECTDIR}

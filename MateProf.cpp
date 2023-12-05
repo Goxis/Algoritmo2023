@@ -74,5 +74,82 @@ int MateProf::NumIgual(int Num1, int Num2, int Num3)
 
 int MateProf::CincoNumeros(int Num1, int Num2, int Num3, int Num4, int Num5)
 {
+    int gordo,anorexico;
+    if (Num1 > Num2)
+        gordo = Num1;
+    else
+        gordo= Num2;
+    if (Num3 > gordo)
+        gordo = Num3;
+    if (Num4 > gordo)
+        gordo = Num4;
+    if (Num5 > gordo)
+        gordo = Num5;
     
+    if (Num1 > Num2)
+        anorexico = Num2;
+    else
+        anorexico= Num1;
+    if (Num3 < anorexico)
+        anorexico = Num3;
+    if (Num4 < anorexico)
+        anorexico = Num4;
+    if (Num5 < anorexico)
+        anorexico = Num5;
+    printf("\nEl numero mas grande existente es: %d\n",gordo);
+    printf("\nEl numero mas pequeno existente es: %d\n",anorexico);
+}
+
+void MateProf::Estadisticas(int N1, int N2, int N3, int* suma, int* producto, int* menor, int* mayor, float* promedio)
+{
+    *suma = N1 + N2 + N3;
+    *producto = N1 * N2 * N3;
+    *menor = (N1 < N2) ? N1 : N2;
+        /*
+         if (N1 < N2)
+            *menor=N1;
+         else
+            *menor = N2;
+        */
+    if (N3 < *menor)
+        *menor = N3;
+    *mayor = (N1 > N2) ? N1:N2;
+    if (N3 > *mayor)
+        *mayor = N3;
+    *promedio = *suma / 3.0;
+}
+
+bool MateProf::Multiplo(int n1, int n2)
+{
+    if ((n1 % n2) == 0)
+        return true;
+    else
+        return false;
+}
+
+void MateProf::Iva(double importe, double *iva, double *total)
+{
+    *iva = importe * .15;
+    *total = importe + *iva;
+    
+}
+
+bool MateProf::TanX(int catetoOpuesto, int catetoAdyacente, double* tangX)
+{
+    if(catetoAdyacente == 0)
+        return false;
+    *tangX = catetoOpuesto / (double)catetoAdyacente;
+    return true;
+}
+
+bool MateProf::Chicharron(double a, double b, double c, double* raiz, double* raiz2)
+{
+    if(a == 0)
+        return false;
+    double discriminante = pow(b,2) - (4.0 * a * c);
+    if(discriminante < 0)
+        return false;
+    *raiz = (-b + sqrt(discriminante)) / (2.0 * a);
+    *raiz2 = (-b - sqrt(discriminante)) / (2.0 * a);
+    return true;
 }

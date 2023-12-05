@@ -10,6 +10,7 @@
       <itemPath>FormulasComplejas.h</itemPath>
       <itemPath>Inicio.h</itemPath>
       <itemPath>MateProf.h</itemPath>
+      <itemPath>Negocios.h</itemPath>
       <itemPath>Probando.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -25,6 +26,7 @@
       <itemPath>FormulasComplejas.cpp</itemPath>
       <itemPath>Inicio.cpp</itemPath>
       <itemPath>MateProf.cpp</itemPath>
+      <itemPath>Negocios.cpp</itemPath>
       <itemPath>Probando.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -73,6 +75,10 @@
       <item path="MateProf.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MateProf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Negocios.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Negocios.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Probando.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -124,6 +130,10 @@
       <item path="MateProf.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="MateProf.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Negocios.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Negocios.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Probando.cpp" ex="false" tool="1" flavor2="0">
       </item>

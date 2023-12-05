@@ -6,6 +6,7 @@
 #include "FormulasComplejas.h"
 #include "Fechas.h"
 #include "MateProf.h"
+#include "Negocios.h"
 
 int validarDato(const char* fm, void* var)
 {
@@ -197,7 +198,7 @@ int main(int argc, char** argv) {
             else
             {
                 printf("EL mayor es:%d\n",May);
-            }*/
+            }
             
             int n1,n2,n3;
             printf("Dame el primer numero: ");
@@ -211,7 +212,108 @@ int main(int argc, char** argv) {
             scanf("%d",&n3);
             MateProf ma;
             int May = ma.NumIgual(n1,n2,n3);
-        }
+            
+            int n1,n2,n3,n4,n5;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&n1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&n2);
+            printf("Dame el tercero numero: ");
+            fflush(stdout);
+            scanf("%d",&n3);
+            printf("Dame el cuarto numero: ");
+            fflush(stdout);
+            scanf("%d",&n4);
+            printf("Dame el quinto numero: ");
+            fflush(stdout);
+            scanf("%d",&n5);
+            MateProf ma;
+            int May = ma.CincoNumeros(n1,n2,n3,n4,n5);      
+            
+            int N1,N2,N3;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&N1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&N2);
+            printf("Dame el tercero numero: ");
+            fflush(stdout);
+            scanf("%d",&N3);
+            MateProf ma;
+            int suma, producto, menor, mayor;
+            float promedio;
+            ma.Estadisticas(N1,N2,N3,&suma,&producto,&menor,&mayor,&promedio);
+            printf("Suma: %d, Producto: %d, Menor: %d, Mayor: %d, Promedio %f", suma, producto, menor, mayor, promedio);
+        
+            int n1,n2;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&n1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&n2);
+            MateProf ma;
+            if(ma.Multiplo(n1,n2))
+                printf("El %d es multipli de %d\n",n1,n2);
+            
+            
+            double importe, iva, total;
+            printf("Dame el importe: ");
+            fflush(stdout);
+            scanf("%lf",&importe);
+            MateProf ma;
+            ma.Iva(importe,&iva,&total);
+            printf("El importe %lf causo un iva de %lf y un total de %lf",importe,iva,total);
+            
+            
+            double venta, importeIva, totalAPagar;
+            printf("Dame el importe: ");
+            fflush(stdout);
+            scanf("%lf",&venta);
+            Negocios neg;
+            printf("main: valor de venta %lf, direccion de venta %x\n",venta,&venta);
+            printf("main: valor de importe iva %lf, direccion de importe Iva %x",importeIva,&importeIva);
+            printf("main: valor de total a pagar %lf, direccion de total a pagar %x",totalAPagar,&totalAPagar);
+            neg.Iva(venta,&importeIva,&totalAPagar);
+            printf("El importe %lf causo un iva de %lf y un total de %lf",venta,importeIva,totalAPagar);
+            
+            
+            int co, ca;
+            double tan;
+            printf("Dame la longitud del cateto opuesto: ");
+            fflush(stdout);
+            scanf("%d",&co);
+            printf("Dame la longitud del cateto adyacente: ");
+            fflush(stdout);
+            scanf("%d",&ca);
+            MateProf mat;
+            if(mat.TanX(co,ca,&tan))
+                printf("La tangente fue %lf\n",tan);
+            else
+                printf("No se pudo calcular la tangente");
+            */
+            
+            double a, b, c, r1, r2;
+            printf("Dame el coeficiente del término cuadrático: ");
+            fflush(stdout);
+            scanf("%lf",&a);
+            printf("Dame el coeficiente del término lineal: ");
+            fflush(stdout);
+            scanf("%lf",&b);
+            printf("Dame la constante: ");
+            fflush(stdout);
+            scanf("%lf",&c);
+            MateProf mate;
+            if(mate.Chicharron(a,b,c,&r1,&r2))
+                printf("Las raíces son %lf y %lf\n\n",r1,r2);
+            else
+                printf("No se pudieron calcular las soluciones de la ecuación cuadrática\n\n");
+            
+            
+        }   
         else if (InicioOp == -1)
         {
             printf("Gracias por utilizar esta cosa");
