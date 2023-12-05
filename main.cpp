@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdbool.h> //para el if????
 #include "Inicio.h"
 #include <iostream>
 #include "ConversionesNew.h"
@@ -294,7 +295,7 @@ int main(int argc, char** argv) {
                 printf("La tangente fue %lf\n",tan);
             else
                 printf("No se pudo calcular la tangente");
-            */
+            
             
             double a, b, c, r1, r2;
             printf("Dame el coeficiente del término cuadrático: ");
@@ -311,6 +312,30 @@ int main(int argc, char** argv) {
                 printf("Las raíces son %lf y %lf\n\n",r1,r2);
             else
                 printf("No se pudieron calcular las soluciones de la ecuación cuadrática\n\n");
+            
+            
+            int VariableEpicA, VariableEpicB;
+            double Vava;
+            printf("Dame el coeficiente del término cuadrático: ");
+            fflush(stdout);
+            scanf("%d",&VariableEpicA);
+            printf("Dame el coeficiente del término lineal: ");
+            fflush(stdout);
+            scanf("%d",&VariableEpicB);
+            MateProf mate;
+            if (VariableEpicB == 0){
+                printf("\n---------Favor de colocar la hipotenusa correctamente---------\n\n");
+            }
+            else{
+                mate.SenX(VariableEpicA, VariableEpicB, &Vava);
+                printf("\n\nEl seno de un angulo es de: %lf\n\n\n",Vava);
+            }
+            */
+            
+            //Aqui falta la Es impar
+            
+            //Aqui falta la de IMC
+            
             
             
         }   

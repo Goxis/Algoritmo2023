@@ -18,6 +18,7 @@ public:
     void Iva(double importe, double* iva, double* total);
     bool TanX(int catetoOpuesto, int catetoAdyacente, double* tangX);
     bool Chicharron(double a, double b, double c, double* raiz, double* raiz2);
+    bool SenX(int CatetoOpuesto, int Hipotenusa, double *senX);
 private:
 
 };

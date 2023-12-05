@@ -4,7 +4,7 @@
 class Inicio {
 public:
     int Iniciop ();
-    //void iniciar(int& InicioOp); // Declaración del método iniciar
+    int SeleccionVariada ();
 };
 
 #endif

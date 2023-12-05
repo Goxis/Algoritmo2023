@@ -153,3 +153,12 @@ bool MateProf::Chicharron(double a, double b, double c, double* raiz, double* ra
     *raiz2 = (-b - sqrt(discriminante)) / (2.0 * a);
     return true;
 }
+
+bool MateProf::SenX(int CatetoOpuesto, int Hipotenusa, double *senX)
+{
+    *senX = CatetoOpuesto / Hipotenusa;
+    printf("%lf\n",*senX);
+    printf("%d\n",CatetoOpuesto);
+    printf("%d\n",Hipotenusa);
+}
+
