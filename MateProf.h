@@ -19,6 +19,7 @@ public:
     bool TanX(int catetoOpuesto, int catetoAdyacente, double* tangX);
     bool Chicharron(double a, double b, double c, double* raiz, double* raiz2);
     bool SenX(int CatetoOpuesto, int Hipotenusa, double *senX);
+    int TipoTriangulo(int ladoA, int ladoB, int ladoC);
 private:
 
 };

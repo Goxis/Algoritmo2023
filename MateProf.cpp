@@ -162,3 +162,32 @@ bool MateProf::SenX(int CatetoOpuesto, int Hipotenusa, double *senX)
     printf("%d\n",Hipotenusa);
 }
 
+int MateProf::TipoTriangulo(int ladoA, int ladoB, int ladoC)
+{
+    int suma1,suma2,suma3;
+    suma1=ladoA+ladoB;
+    suma2=ladoB+ladoC;
+    suma3=ladoC+ladoA;
+
+    if(suma1>ladoC && suma2>ladoA && suma3>ladoB)
+    {
+        printf("\nEs un triangulo\n");
+        if (ladoA!=ladoB && ladoB!=ladoC && ladoA!=ladoC)
+        {
+            printf("\nEs un triangulo escaleno\n");
+        }
+        else
+            if(ladoA==ladoB && ladoB!=ladoC && ladoA!=ladoC || ladoB==ladoC && ladoB!=ladoA && ladoC!=ladoA || ladoA==ladoC && ladoA!=ladoB && ladoC!=ladoB)
+            {
+                printf("\nisosceles\n");
+            }
+            else
+            {
+                printf("\nequilatero\n");
+            }
+    }
+    else
+    {
+        printf("\nNo es un triangulo porque no cumple el teorema de desigualdad de un triangulo\n");
+    }
+}

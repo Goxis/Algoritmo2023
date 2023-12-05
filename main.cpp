@@ -336,7 +336,18 @@ int main(int argc, char** argv) {
             
             //Aqui falta la de IMC
             
-            
+            int nn1,nn2,nn3;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&nn1);
+            printf("Dame el segundo numero: ");
+            fflush(stdout);
+            scanf("%d",&nn2);
+            printf("Dame el tercero numero: ");
+            fflush(stdout);
+            scanf("%d",&nn3);
+            MateProf ma;
+            ma.TipoTriangulo(nn1,nn2,nn3);
             
         }   
         else if (InicioOp == -1)
