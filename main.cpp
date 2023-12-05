@@ -330,7 +330,6 @@ int main(int argc, char** argv) {
                 mate.SenX(VariableEpicA, VariableEpicB, &Vava);
                 printf("\n\nEl seno de un angulo es de: %lf\n\n\n",Vava);
             }
-            */
             
             //Aqui falta la Es impar
             
@@ -348,6 +347,21 @@ int main(int argc, char** argv) {
             scanf("%d",&nn3);
             MateProf ma;
             ma.TipoTriangulo(nn1,nn2,nn3);
+            */
+            
+            int valorInverso;
+            printf("Dame el primer numero: ");
+            fflush(stdout);
+            scanf("%d",&valorInverso);
+            if (valorInverso == 0)
+            {
+                printf("El valor es de 0");
+            }
+            else
+            {
+                MateProf ma;
+                ma.Inverso(valorInverso);
+            }
             
         }   
         else if (InicioOp == -1)

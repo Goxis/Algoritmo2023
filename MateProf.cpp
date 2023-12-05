@@ -191,3 +191,8 @@ int MateProf::TipoTriangulo(int ladoA, int ladoB, int ladoC)
         printf("\nNo es un triangulo porque no cumple el teorema de desigualdad de un triangulo\n");
     }
 }
+
+float MateProf::Inverso(double Num)
+{
+    
+}
