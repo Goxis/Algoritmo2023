@@ -156,10 +156,12 @@ bool MateProf::Chicharron(double a, double b, double c, double* raiz, double* ra
 
 bool MateProf::SenX(int CatetoOpuesto, int Hipotenusa, double *senX)
 {
-    *senX = CatetoOpuesto / Hipotenusa;
-    printf("%lf\n",*senX);
-    printf("%d\n",CatetoOpuesto);
-    printf("%d\n",Hipotenusa);
+    if (Hipotenusa == 0)
+    {
+        return false;
+    }
+    *senX = (double)CatetoOpuesto / (double)Hipotenusa;
+    return true;
 }
 
 int MateProf::TipoTriangulo(int ladoA, int ladoB, int ladoC)
@@ -194,5 +196,86 @@ int MateProf::TipoTriangulo(int ladoA, int ladoB, int ladoC)
 
 float MateProf::Inverso(double Num)
 {
-    
+    printf("\n\n\n1/%lf\n\n",Num);
+    return 1.0 / Num;
+}
+
+float MateProf::IMC(float kilogramos, float altura)
+{
+    float IMC;
+    IMC = altura * altura;
+    IMC = kilogramos/IMC;
+    if (IMC < 18.5)
+    {
+        printf("\nSu peso es bajo\n");
+        printf("\nIMC: %f",IMC);
+    }
+    else
+    {
+        if (IMC > 18.5 && IMC < 24.9)
+        {
+            printf("\nSu peso es normal\n");
+            printf("\nIMC: %f",IMC);
+        }
+        else
+        {
+            if (IMC > 25 && IMC < 29.9)
+            {
+                printf("\nTiene sobrepeso\n");
+                printf("\nIMC: %f",IMC);
+            }
+            else
+            {
+                if (IMC > 30 && IMC < 34.9)
+                {
+                    printf("\nTiene obesidad\n");
+                    printf("\nIMC: %f",IMC);
+                }
+                else
+                {
+                    if (IMC > 35)
+                    {
+                        printf("\nTiene obesidad morbida\n");
+                        printf("\nIMC: %f",IMC);
+                    }
+                }
+            }
+        }
+    }
+}
+
+float MateProf::EsImpar(int Num)
+{
+    int UwU;
+    UwU = Num % 2;
+    if (UwU == 0)
+    {
+        printf("\n\nEs par\n");
+    }
+    else
+    {
+        printf("\n\nEs impar\n");
+    }
+    printf("Residuo de la division: %d\n", UwU);
+}
+
+bool MateProf::CseX(int Hipotenusa, int CatetoOpuesto, double *cseX)
+{
+    *cseX = (double)Hipotenusa / (double)CatetoOpuesto;
+    if (*cseX == 0)
+    {
+        return false;
+    }
+    else 
+    {
+        return true;
+    }
+}
+
+float MateProf::AreaXSemi(int LadoA, int LadoB, int LadoC)
+{
+    double pesopluma, AreaFinal;
+    pesopluma = ((double)LadoA + (double)LadoB + (double)LadoC) / 2;
+    AreaFinal = sqrt((pesopluma*(pesopluma-(double)LadoA)*(pesopluma-(double)LadoB)*(pesopluma-(double)LadoC)));
+    printf("El area final es de %lf\n", AreaFinal);
 }

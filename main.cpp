@@ -331,10 +331,7 @@ int main(int argc, char** argv) {
                 printf("\n\nEl seno de un angulo es de: %lf\n\n\n",Vava);
             }
             
-            //Aqui falta la Es impar
-            
-            //Aqui falta la de IMC
-            
+             *  
             int nn1,nn2,nn3;
             printf("Dame el primer numero: ");
             fflush(stdout);
@@ -347,7 +344,7 @@ int main(int argc, char** argv) {
             scanf("%d",&nn3);
             MateProf ma;
             ma.TipoTriangulo(nn1,nn2,nn3);
-            */
+  
             
             int valorInverso;
             printf("Dame el primer numero: ");
@@ -355,13 +352,66 @@ int main(int argc, char** argv) {
             scanf("%d",&valorInverso);
             if (valorInverso == 0)
             {
-                printf("El valor es de 0");
+                printf("El valor es de 0\n\n");
             }
             else
             {
                 MateProf ma;
                 ma.Inverso(valorInverso);
             }
+            
+            
+            float kil,altu;
+            printf("Dame el kilo: ");
+            fflush(stdout);
+            scanf("%f",&kil);
+            printf("Dame la altura: ");
+            fflush(stdout);
+            scanf("%f",&altu);
+            MateProf ma;
+            ma.IMC(kil,altu);
+
+            int NumOne;
+            printf("Dame el primer digito: ");
+            fflush(stdout);
+            scanf("%d",&NumOne);
+            MateProf ma;
+            ma.EsImpar(NumOne);
+            
+            int Hipo, Cate;
+            double pruebis;
+            printf("Dame la hipotenusa: ");
+            fflush(stdout);
+            scanf("%d",&Hipo);
+            printf("Dame el cateto: ");
+            fflush(stdout);
+            scanf("%d",&Cate);
+            //MateProf ma;
+            ma.CseX(Hipo, Cate, &pruebis);
+            if (pruebis == 0)
+            {
+                printf("El cateto opuesto es 0\n");
+                //return false;
+            }
+            else 
+            {
+                printf("El cateto opuesto es de: %lf\n",pruebis);
+                //return true;
+            }
+            */
+            
+            int LaditoA, LaditoB, LaditoC;
+            printf("Dame el ladito A: ");
+            fflush(stdout);
+            scanf("%d",&LaditoA);
+            printf("Dame el ladito B: ");
+            fflush(stdout);
+            scanf("%d",&LaditoB);
+            printf("Dame el ladito C: ");
+            fflush(stdout);
+            scanf("%d",&LaditoC);
+            MateProf ma;
+            ma.AreaXSemi(LaditoA, LaditoB, LaditoC);
             
         }   
         else if (InicioOp == -1)

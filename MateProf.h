@@ -21,6 +21,10 @@ public:
     bool SenX(int CatetoOpuesto, int Hipotenusa, double *senX);
     int TipoTriangulo(int ladoA, int ladoB, int ladoC);
     float Inverso(double Num);
+    float IMC(float kilogramos, float altura);
+    float EsImpar(int Num);
+    bool CseX(int Hipotenusa, int CatetoOpuesto, double *cseX);
+    float AreaXSemi(int LadoA, int LadoB, int LadoC);
 private:
 
 };
