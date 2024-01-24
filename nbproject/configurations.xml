@@ -9,6 +9,7 @@
       <itemPath>Fechas.h</itemPath>
       <itemPath>FormulasComplejas.h</itemPath>
       <itemPath>Inicio.h</itemPath>
+      <itemPath>Juegos.h</itemPath>
       <itemPath>MateProf.h</itemPath>
       <itemPath>Negocios.h</itemPath>
       <itemPath>Probando.h</itemPath>
@@ -25,6 +26,7 @@
       <itemPath>Fechas.cpp</itemPath>
       <itemPath>FormulasComplejas.cpp</itemPath>
       <itemPath>Inicio.cpp</itemPath>
+      <itemPath>Juegos.cpp</itemPath>
       <itemPath>MateProf.cpp</itemPath>
       <itemPath>Negocios.cpp</itemPath>
       <itemPath>Probando.cpp</itemPath>
@@ -71,6 +73,10 @@
       <item path="Inicio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Inicio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Juegos.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Juegos.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="MateProf.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -126,6 +132,10 @@
       <item path="Inicio.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Inicio.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Juegos.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Juegos.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="MateProf.cpp" ex="false" tool="1" flavor2="0">
       </item>

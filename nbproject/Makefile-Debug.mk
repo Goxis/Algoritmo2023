@@ -40,6 +40,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Fechas.o \
 	${OBJECTDIR}/FormulasComplejas.o \
 	${OBJECTDIR}/Inicio.o \
+	${OBJECTDIR}/Juegos.o \
 	${OBJECTDIR}/MateProf.o \
 	${OBJECTDIR}/Negocios.o \
 	${OBJECTDIR}/Probando.o \
@@ -94,6 +95,11 @@ ${OBJECTDIR}/Inicio.o: Inicio.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Inicio.o Inicio.cpp
+
+${OBJECTDIR}/Juegos.o: Juegos.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Juegos.o Juegos.cpp
 
 ${OBJECTDIR}/MateProf.o: MateProf.cpp
 	${MKDIR} -p ${OBJECTDIR}

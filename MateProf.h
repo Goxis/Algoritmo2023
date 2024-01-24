@@ -25,6 +25,18 @@ public:
     float EsImpar(int Num);
     bool CseX(int Hipotenusa, int CatetoOpuesto, double *cseX);
     float AreaXSemi(int LadoA, int LadoB, int LadoC);
+    bool SeeXX(int Hipotenusa, int CatetoAdyacente, double *seeX);
+    int Positivo20();
+    void SumayMedia(int *suma, int *media);
+    int TresenTres();
+    int SumaCuadrados100();
+    double Serie100();
+    double Serie500();
+    int FactoresPro();
+    int Invertido(int num);
+    int ContarDigitos(int num);
+    int Divisible9(int num);
+    int AdivinaMiNumero();
 private:
 
 };

@@ -1,6 +1,8 @@
 #include "MateProf.h"
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h> //Para rand
+#include <time.h> //Para rand
 
 double MateProf::AreaIcosaedro(double AreaLado)
 {
@@ -279,3 +281,211 @@ float MateProf::AreaXSemi(int LadoA, int LadoB, int LadoC)
     AreaFinal = sqrt((pesopluma*(pesopluma-(double)LadoA)*(pesopluma-(double)LadoB)*(pesopluma-(double)LadoC)));
     printf("El area final es de %lf\n", AreaFinal);
 }
+
+bool MateProf::SeeXX(int Hipotenusa, int CatetoAdyacente, double *seeX)
+{
+    if (Hipotenusa == 0)
+    {
+        return false;
+    }
+    *seeX = (double)Hipotenusa / (double)CatetoAdyacente;
+    if (CatetoAdyacente == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+int MateProf::Positivo20()
+{
+    int num, positivos = 0;
+    for(int i = 1; i <= 20; i++)
+    {
+        printf("Dame un numero: ");
+        fflush(stdout);
+        scanf("%d",&num);
+        if (num > 0)
+            positivos++;
+    }
+    return positivos;
+}
+
+void MateProf::SumayMedia(int *suma, int *media)
+{
+    *suma = 0, *media = 0;
+    for(int i = 1; i <= 200; i++)
+    {
+        *suma = *suma + i;
+    }
+    *media = *suma / 200;
+}
+
+int MateProf::TresenTres()
+{
+    int num = 3, suma = 0;
+    printf("\n\n");
+    for(int i = 1; i <= 99; i++)
+    {
+        suma = num + suma;
+        printf("%d\n",num);
+        num = num + 3;
+    }
+    printf("La suma de todo es: %d",suma);
+}
+
+int MateProf::SumaCuadrados100()
+{
+    int num = 0, suma = 0;
+    printf("\n\n");
+    for(int i = 1; i <= 100; i++)
+    {
+        num = i * i;
+        suma = suma + num;
+    }
+    printf("La suma de todo es: %d",suma);
+}
+
+double MateProf::Serie100()
+{
+    double suma = 1.0;
+    for(int i = 2; i < 200; i += 4)
+    {
+        suma = suma - (1.0 / (double)i);
+        suma += 1.0 / (i + 2);
+    }
+    return suma;
+}
+
+double MateProf::Serie500(){
+    double suma = 4.0;
+    for(int i = 3; i < 10000000; i += 4)
+    {
+        suma = suma - (4.0 / (double)i);
+        suma += 4.0 / (i + 2);
+    }
+    return suma;
+}
+
+int MateProf::FactoresPro()
+{
+    int funcion;
+    printf("\nDame el numero: \n");
+    fflush(stdout);
+    scanf("%d",&funcion);
+    for(int i = funcion; i > 0; i = i - 1)
+    {
+        if (funcion % i == 0)
+        {
+            printf("%d es un factor\n", i);
+        }
+    }
+}
+
+int MateProf::Invertido(int num)
+{
+    int inv = 0;
+    while(num > 0)
+    {
+        inv *= 10;
+        //printf("Primer: %d", inv);
+        inv += num % 10;
+        //printf("Segundo: %d", inv);
+        num /= 10;
+        //printf("Tercer: %d", num);
+    }
+    return inv;
+}
+
+int MateProf::ContarDigitos(int num)
+{
+    int inv = 0;
+    int digitos = 0;
+    while(num > 0)
+    {
+        inv *= 10;
+        //printf("Primer: %d", inv);
+        inv += num % 10;
+        //printf("Segundo: %d", inv);
+        num /= 10;
+        //printf("Tercer: %d", num);
+        digitos = digitos + 1;
+    }
+    return digitos;
+}
+
+int MateProf::Divisible9(int num)
+{
+    int va = 0;
+    int val = 9;
+    int inv = 0;
+    while(num > 0)
+    {
+        inv = 0;
+        inv *= 10;
+        inv += num % 10;
+        num /= 10;
+        va = va + inv;
+    }
+    if (va % 9 == 0)
+    {
+        printf("\nEs divisible entre 9");
+    }
+    else
+    {
+        printf("\nNo es divisible entre 9");
+    }
+    return va;
+}
+
+int MateProf::AdivinaMiNumero()
+{
+    int num, min, max;
+    min = 0;
+    max = 100;
+    int NumeroAdivinar;
+    srand(time(NULL));
+    while (true)
+    {
+        NumeroAdivinar = rand();
+        if (NumeroAdivinar < max)
+        {
+            break;
+        }
+    }
+    
+    while (true)
+    {
+        while (true)
+        {
+            num = rand();
+            if (num < max && num > min)
+            {
+                break;
+            }
+        }
+        printf("pienso en %d\n",num);
+        
+        if (num == NumeroAdivinar)
+        {
+            printf("\n\nAdivinaste Perroooooo");
+            break;
+        }
+        else
+        {
+            if (NumeroAdivinar > num)
+            {
+                printf("El numero a adivinar es MAYOR que %d\n",num);
+                min = num;
+            }
+            else
+            {
+                printf("El numero a adivinar es MENOR que %d\n",num);
+                max = num;
+            }
+        }
+    }
+}
+

@@ -8,6 +8,7 @@
 #include "Fechas.h"
 #include "MateProf.h"
 #include "Negocios.h"
+#include "Juegos.h"
 
 int validarDato(const char* fm, void* var)
 {
@@ -398,7 +399,7 @@ int main(int argc, char** argv) {
                 printf("El cateto opuesto es de: %lf\n",pruebis);
                 //return true;
             }
-            */
+            
             
             int LaditoA, LaditoB, LaditoC;
             printf("Dame el ladito A: ");
@@ -413,6 +414,99 @@ int main(int argc, char** argv) {
             MateProf ma;
             ma.AreaXSemi(LaditoA, LaditoB, LaditoC);
             
+            
+            int VariableEpicA, VariableEpicB;
+            double Vava;
+            printf("Dame la hipotenusa: ");
+            fflush(stdout);
+            scanf("%d",&VariableEpicA);
+            printf("Dame el cateto: ");
+            fflush(stdout);
+            scanf("%d",&VariableEpicB);
+            MateProf mate;
+            if (VariableEpicB == 0){
+                printf("\n---------Favor de colocar la hipotenusa correctamente---------\n\n");
+            }
+            else{
+                mate.SeeXX(VariableEpicA, VariableEpicB, &Vava);
+                printf("\n\nLa secante de un angulo de x grados es: %lf\n\n\n",Vava);
+            }
+
+            
+            MateProf mate;
+            int de=mate.Positivo20();
+            printf("El resultado es: %d positivos",de);
+            
+            
+            int sum, prom;
+            MateProf mate;
+            mate.SumayMedia(&sum,&prom);
+            printf("La suma fue %d y el promedio fue %d", sum, prom);
+            
+            
+            MateProf mate;
+            mate.TresenTres();
+            
+            
+            MateProf mate;
+            mate.SumaCuadrados100();
+           
+            
+            MateProf mate;
+            double sumaSerie = mate.Serie100();
+            printf("La suma de la serie fue: %lf",sumaSerie);
+            
+            
+             
+            MateProf mate;
+            double sumaSerie = mate.Serie500();
+            printf("La suma de la serie fue: %lf",sumaSerie);
+            
+            
+            MateProf mate;
+            mate.FactoresPro();
+            
+            
+            int num, inv;
+            printf("Dame el numero a invertir: ");
+            fflush(stdout);
+            scanf("%d",&num);
+            MateProf mate;
+            inv = mate.Invertido(num);
+            printf("El resultado es: %d", inv);
+            
+            
+            
+            
+            int num, inv;
+            printf("Dame el numero a invertir: ");
+            fflush(stdout);
+            scanf("%d",&num);
+            MateProf mate;
+            inv = mate.ContarDigitos(num);
+            printf("Tiene tantos numeros: %d", inv);
+            
+            
+            int num, inv;
+            printf("Dame el numero pa saber qpd: ");
+            fflush(stdout);
+            scanf("%d",&num);
+            MateProf mate;
+            inv = mate.Divisible9(num);
+            
+            
+            Juegos jgos;
+            jgos.AdivinaCaracter();
+            
+            
+            MateProf mate;
+            mate.AdivinaMiNumero();
+             * */
+            
+            Juegos jgos;
+            jgos.Balero();
+            
+            return 0;             
         }   
         else if (InicioOp == -1)
         {
