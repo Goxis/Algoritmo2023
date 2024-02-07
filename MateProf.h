@@ -37,6 +37,8 @@ public:
     int ContarDigitos(int num);
     int Divisible9(int num);
     int AdivinaMiNumero();
+    void ParesRango();
+    void PromedioHasta0();
 private:
 
 };

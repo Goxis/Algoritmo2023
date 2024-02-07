@@ -489,3 +489,43 @@ int MateProf::AdivinaMiNumero()
     }
 }
 
+void MateProf::ParesRango()
+{
+    int num, inv, max, min;
+    max = 200;
+    min = 100;
+    printf("\n\n\n\nDame el numero pa saber qpd: ");
+    fflush(stdout);
+    scanf("%d",&num);
+    for(int i = num; i <= 200; i = i + 1)
+    {
+        if (i % 2 == 0)
+        {
+            printf("%d es un par\n", i);
+        }
+    }
+}
+
+void MateProf::PromedioHasta0()
+{
+    int NumeroIngresado, Vuelta, NumeroGuardado, Media;
+    Vuelta = 0;
+    NumeroIngresado = 0;
+    NumeroGuardado = 0;
+    while (true)
+    {
+        printf("Dame el numero pa saber qpd: ");
+        fflush(stdout);
+        scanf("%d",&NumeroIngresado);
+        if (NumeroIngresado == 0)
+        {
+            break;
+        }
+        NumeroGuardado = NumeroGuardado + NumeroIngresado;
+        Vuelta = Vuelta + 1;
+    }
+    Media = NumeroGuardado / Vuelta;
+    printf("La media es de %d\n",Media);
+    printf("Vueltas: %d\n",Vuelta);
+    printf("Suma de numeros: %d",NumeroGuardado);
+}

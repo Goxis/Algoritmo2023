@@ -501,11 +501,20 @@ int main(int argc, char** argv) {
             
             MateProf mate;
             mate.AdivinaMiNumero();
-             * */
+  
             
             Juegos jgos;
             jgos.Balero();
             
+              
+             
+            MateProf mate;
+            mate.ParesRango();
+            */
+            
+            
+            MateProf mate;
+            mate.PromedioHasta0();
             return 0;             
         }   
         else if (InicioOp == -1)
