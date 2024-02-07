@@ -529,3 +529,22 @@ void MateProf::PromedioHasta0()
     printf("Vueltas: %d\n",Vuelta);
     printf("Suma de numeros: %d",NumeroGuardado);
 }
+
+
+void MateProf::NoCeros()
+{
+    int num;
+    while (true)
+    {
+        num=0;
+        printf("Dime tu numero: ");
+        fflush(stdout);
+        scanf("%d",&num);
+        if (num == 0)
+        {
+            break;
+        }
+        printf("El numero que colocaste fue: %d\n",num);
+    }
+    printf("Pusiste 0");
+}

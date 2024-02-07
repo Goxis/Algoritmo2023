@@ -39,6 +39,7 @@ public:
     int AdivinaMiNumero();
     void ParesRango();
     void PromedioHasta0();
+    void NoCeros();
 private:
 
 };

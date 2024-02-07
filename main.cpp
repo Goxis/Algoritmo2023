@@ -510,11 +510,16 @@ int main(int argc, char** argv) {
              
             MateProf mate;
             mate.ParesRango();
-            */
+            
             
             
             MateProf mate;
             mate.PromedioHasta0();
+            */
+            
+            
+            MateProf mate;
+            mate.NoCeros();
             return 0;             
         }   
         else if (InicioOp == -1)
